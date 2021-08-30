@@ -1,0 +1,226 @@
+:root{
+    --vermelho: rgb(201, 2, 2);
+    --preto: rgb(0, 0, 0);
+    --branco: rgb(207, 207, 207);
+    
+}
+*{
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+body{
+    background:  url(../resources/netflix5.png);
+    background-position: center;
+}
+
+body main{
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*LOGO*/
+
+header{
+    height: 100px;
+    background: linear-gradient( to bottom,rgba(0, 0, 0),rgba(0,0,0,0.2));
+    display: flex;
+    
+    align-items: center;
+    
+}
+
+/*LOGO*/
+header .logo-c{
+   
+    width: 100%;
+    margin-left: 30px;
+    margin-top: -10px;
+
+    font-size: 30px;
+    font-family: 'Arial Black', times;
+    color: var(--vermelho);
+}
+
+/*LOGIN*/
+ main .main{
+     background-color: rgba(0, 0, 0, 0.70);
+     max-width: 400px;
+     min-width: 400px;
+     min-height: 80vh;
+     padding: 3rem;
+     border-radius: 4px;
+ }
+/* TITULO DO FORMULARIO*/
+ main .main h2{
+     font-family: Arial, Helvetica, sans-serif;
+     font-weight: 800;
+     color: white;
+     position: relative;
+ }
+
+ main .main h2::before{
+     content: "";
+     position: absolute;
+     height: 2px;
+     width: 80px;
+     bottom: 3px;
+     left: 0;
+     border-radius: 8px;
+     background: var(--vermelho);
+ }
+
+/*FORMULARIO*/
+
+ form{
+     display: flex;
+     flex-direction: column;
+ }
+
+ .input-field{
+     position: relative;
+ }
+
+ form .input-field:first-child{
+     margin-bottom: 1.5rem;
+     margin-top: 1.5rem;
+ }
+
+ form .input-field .underline::before{
+     content: '';
+     position: absolute;
+     height: 1px;
+     width: 100%;
+     bottom: -1px;
+     left: 0;
+     background-color:var(--branco);
+
+ }
+
+ form .input-field .underline::after{
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    bottom: -1px;
+    left: 0;
+    background-color: rgb(255, 76, 22);
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+    transform-origin: left;
+}
+
+.input-field input:focus ~ .underline::after{
+    transform: scaleX(1);
+}
+
+ .input-field input{
+     outline:none;
+     font-size: 1rem;
+     color: var(--preto);
+     width: 100%;
+     height: 50px;
+     background-color: rgb(58, 57, 57);
+ }
+
+form input[type='submit'] {
+    margin-top: 2rem;
+    padding: 0.8rem;
+    background: var(--vermelho);
+    cursor: pointer;
+    color: var(--branco);
+    font-size: 1.2rem;
+    font-weight: 300;
+    border-radius: 4px;
+
+}
+
+/*CHECK BOX*/
+.lembrete{
+    margin-top: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--branco);
+    
+}
+.lembrete input[type='checkbox']{
+    transform: scale(1.5);
+}
+
+
+.lembrete a{
+    float: right;
+    text-decoration: none;
+    color: var(--branco);
+
+}
+
+/*BOTAO FACEBOOK*/
+
+.footer{
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer .social-field{
+
+    border-radius: 4px;
+    width: 100%;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 15px;
+
+}
+
+.footer .social-field a {
+    text-decoration: none;
+    color: var(--branco);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 15px;
+
+}
+
+.footer .social-field i {
+    color: rgb(47, 47, 192);
+    margin-right: 10px ;
+    padding: 15px;
+}
+
+.footer .social-field .facebook{
+    background-color: var(--vermelho);
+}
+
+/*ASSINE AGORA*/
+
+.assine {
+    color: var(--branco);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 15px;
+    
+}
+
+.assine a{
+    text-decoration: none;
+    color: rgb(56, 109, 255);
+}
+
+/*SAIBA MAIS   */
+.saiba{
+    color: var(--branco);
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.saiba a{
+    text-decoration: none;
+    color: rgb(56, 109, 255);
+}
+
+
+
+
